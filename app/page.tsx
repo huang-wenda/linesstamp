@@ -2,7 +2,8 @@ import { NavBar } from '@/components/nav-bar'
 import { CategorySearch } from '@/components/category-search'
 import { StickerGrid } from '@/components/sticker-grid'
 import { Footer } from '@/components/footer'
-import { FeaturedBanners } from '@/components/featured-banners'
+import { AdaptiveAd } from '@/components/ads/AdaptiveAd'
+
 
 export default function Home() {
   const officialStickers = Array(10).fill(null).map((_, i) => ({
@@ -21,7 +22,12 @@ export default function Home() {
     <div className="min-h-screen bg-white flex flex-col">
       <NavBar />
       <main className="container mx-auto px-4 flex-grow">
-        <FeaturedBanners />
+        <div className="flex justify-center">
+        <AdaptiveAd
+          width={1368}
+          height={280}      
+        />
+        </div>
         <CategorySearch />
         <div className="space-y-6">
           <StickerGrid title="公式LINEスタンプ ベスト10" stickers={officialStickers} />

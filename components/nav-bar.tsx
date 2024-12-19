@@ -12,8 +12,8 @@ export function NavBar() {
     <div className="w-full">
       <div className="bg-green-500 py-2">
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-white">
-            スタンプ
+          <Link href="/" className="text-3xl font-bold text-white">
+            LinesStamp
           </Link>
           <div className="hidden md:flex items-center space-x-2 w-64">
             <Input 
@@ -37,7 +37,7 @@ export function NavBar() {
       <div className={`bg-black text-white ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <div className="container mx-auto px-4">
           <nav className="flex flex-col md:flex-row">
-            {['LINEスタンプ', '無料スタンプ', 'Twitter', '絵文字', '着せ替え'].map((item) => (
+            {['LINEスタンプ', '無料スタンプ', 'Twitter', '文絵字', '着せ替え'].map((item) => (
               <Link
                 key={item}
                 href={`/${item}`}
